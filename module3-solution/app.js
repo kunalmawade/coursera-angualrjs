@@ -56,7 +56,7 @@
         method: "GET",
         url: (ApiBasePath + "/menu_items.json")
       }).then(function(result) {
-        return result.data.menu_items.filter(function(item){ return item.description.includes(searchTerm); });
+        return result.data.menu_items.filter(function(item){ return item.description.toLowerCase().includes(searchTerm.toLowerCase()); });
       }, function(error) {
         return [];
       });
