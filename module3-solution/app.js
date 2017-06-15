@@ -16,7 +16,8 @@
     narrowIt.downForMe = function () {
       narrowIt.searching = true;
       if (narrowIt.searchTerm !== undefined || narrowIt.searchTerm.length === 0 || narrowIt.searchTerm.trim() === "") {
-        narrowIt.found = []; 
+        narrowIt.found = [];
+        narrowIt.searching = false;
         return;
       }
       var promise = MenuSearchService.getMatchedMenuItems(narrowIt.searchTerm);
