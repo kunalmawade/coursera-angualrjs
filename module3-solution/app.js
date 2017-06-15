@@ -14,7 +14,10 @@
     narrowIt.searching = false;
     narrowIt.downForMe = function () {
       narrowIt.searching = true;
-
+      if (narrowIt.searchTerm.length === 0 || narrowIt.searchTerm.trim() === "") {
+        narrowIt.found = []; 
+        return;
+      }
       var promise = MenuSearchService.getMatchedMenuItems(narrowIt.searchTerm);
       promise.then(function(result){
         narrowIt.searching = false;
