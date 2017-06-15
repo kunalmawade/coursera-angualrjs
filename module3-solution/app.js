@@ -15,7 +15,7 @@
     narrowIt.searchTerm = "";
     narrowIt.downForMe = function () {
       narrowIt.searching = true;
-      if (!narrowIt.searchTerm || narrowIt.searchTerm.length === 0 || narrowIt.searchTerm.trim() === "") {
+      if (narrowIt.searchTerm !== undefined || narrowIt.searchTerm.length === 0 || narrowIt.searchTerm.trim() === "") {
         narrowIt.found = []; 
         return;
       }
