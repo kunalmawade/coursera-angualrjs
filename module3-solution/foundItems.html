@@ -1,0 +1,16 @@
+<table class="table table-border table-hover">
+  <tbody>
+    <thead>
+      <th>Short Name</th>
+      <th>Item</th>
+      <th>Description</th>
+      <th>Choice</th>
+    </thead>
+    <tr ng-repeat="item in narrowItCtrl.menuItems">
+      <td>{{ item.short_name }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.description }}</td>
+      <td><button ng-click="narrowItCtrl.onRemove({index: $index});">Don't want this one!</button></td>
+    </tr>
+  </tbody>
+<table>
