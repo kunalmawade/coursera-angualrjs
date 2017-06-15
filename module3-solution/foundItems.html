@@ -1,12 +1,14 @@
 <table class="table table-border table-hover">
   <tbody>
     <thead>
+      <th>#</th>
       <th>Short Name</th>
       <th>Item</th>
       <th>Description</th>
       <th>Choice</th>
     </thead>
     <tr ng-repeat="item in narrowItCtrl.menuItems">
+      <td>{{ $index + 1 }}</td>
       <td>{{ item.short_name }}</td>
       <td>{{ item.name }}</td>
       <td>{{ item.description }}</td>
