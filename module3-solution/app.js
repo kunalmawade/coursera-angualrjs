@@ -12,9 +12,10 @@
     var narrowIt = this;
     narrowIt.found = [];
     narrowIt.searching = false;
+    narrowIt.searchTerm = "";
     narrowIt.downForMe = function () {
       narrowIt.searching = true;
-      if (narrowIt.searchTerm.length === 0 || narrowIt.searchTerm.trim() === "") {
+      if (!narrowIt.searchTerm || narrowIt.searchTerm.length === 0 || narrowIt.searchTerm.trim() === "") {
         narrowIt.found = []; 
         return;
       }
