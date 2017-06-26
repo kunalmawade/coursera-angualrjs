@@ -1,0 +1,22 @@
+body {
+  font-size: 1.2em;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
+.loading-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.table>tbody>tr:hover {
+  background-color: #76d494;
+}
+.table>tbody>tr>td:hover {
+  cursor: pointer;
+}

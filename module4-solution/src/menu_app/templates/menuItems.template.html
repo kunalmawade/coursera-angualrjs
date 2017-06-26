@@ -1,0 +1,14 @@
+<ol class="breadcrumb">
+  <li><a ui-sref="home">Home</a></li>
+  <li><a ui-sref="categories">Categories</a></li>
+  <li>Menu</li>
+</ol>
+
+<table class="table table-hover table-striped">
+  <tr ng-repeat="item in menuItemsCtrl.menuItems">
+    <td>{{ $index +1 }}</td>
+    <td><strong>{{item.name}}</strong><br>{{item.description}}</td>
+    <td ng-if="item.price_small">{{item.price_small}} <span ng-if="item.small_portion_name">/{{item.small_portion_name}}</span></td>
+    <td ng-if="item.price_large">{{item.price_large}} <span ng-if="item.large_portion_name">/{{item.large_portion_name}}</span></td>
+  </tr>
+</table>
