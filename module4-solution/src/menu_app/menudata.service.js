@@ -14,7 +14,7 @@
         method: "GET",
         url: (ApiBasePath + "/categories.json")
       }).then(function(result) {
-        return result;
+        return result.data;
       }, function(error) {
         return [];
       });
