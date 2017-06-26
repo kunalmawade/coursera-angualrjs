@@ -23,7 +23,12 @@
     .state('categories', {
       url: '/categories',
       templateUrl: 'src/menu_app/templates/categories.template.html',
-      controller: 'CategoriesController as catCtrl'
+      controller: 'CategoriesController as catCtrl',
+      resolve: {
+        catList: ['MenuDataService', function(MenuDataService) {
+          return MenuDataService.getAllCategories();
+        }]
+      }
     })
 
     // Menu Items
